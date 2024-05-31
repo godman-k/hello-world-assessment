@@ -1,12 +1,12 @@
 # VPC Network
 resource "google_compute_network" "vpc_network" {
-  name                    = "my-vpc-net"
+  name                    = "id-me-vpc-net"
   auto_create_subnetworks = false
 }
 
 # Subnet
 resource "google_compute_subnetwork" "subnet" {
-  name          = "my-subnet"
+  name          = "id-me-subnet"
   ip_cidr_range = "10.0.0.0/24"
   region        = var.region
   network       = google_compute_network.vpc_network.id
